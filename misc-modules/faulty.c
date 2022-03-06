@@ -50,7 +50,7 @@ ssize_t faulty_write (struct file *filp, const char __user *buf, size_t count,
 		loff_t *pos)
 {
 	/* make a simple fault by dereferencing a NULL pointer */
-	// *(int *)0 = 0;
+	*(int *)0 = 0;
 	return 0;
 }
 
